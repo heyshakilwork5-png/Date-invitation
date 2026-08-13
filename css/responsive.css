@@ -1,0 +1,141 @@
+@media (min-width: 700px) {
+  .letter-layout {
+    grid-template-columns: 1fr 1.15fr;
+    align-items: center;
+    gap: 1.4rem;
+  }
+
+  .gallery-grid {
+    column-count: 2;
+  }
+
+  .calendar-card {
+    padding: 1.3rem;
+  }
+
+  .date-cell {
+    height: 52px;
+  }
+
+  .no-playground {
+    width: min(620px, 100%);
+    height: 360px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .screen {
+    padding: 1.5rem;
+  }
+
+  .gallery-grid {
+    column-count: 3;
+  }
+
+  .letter-card {
+    padding: 1.5rem;
+  }
+
+  .screen-content.center p {
+    font-size: 1.06rem;
+  }
+
+  .ticket {
+    max-width: 650px;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --header-h: 64px;
+  }
+
+  .progress-wrap {
+    padding: 0.8rem;
+  }
+
+  #progressText {
+    font-size: 0.78rem;
+  }
+
+  .screen {
+    padding: 0.9rem;
+  }
+
+  h1 {
+    font-size: clamp(1.95rem, 9vw, 2.5rem);
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.68;
+  }
+
+  .btn {
+    min-height: 44px;
+    padding-inline: 1.05rem;
+  }
+
+  .option-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .option-card {
+    padding: 0.85rem;
+  }
+
+  .calendar-card {
+    padding: 0.85rem;
+  }
+
+  .date-cell {
+    height: 42px;
+    border-radius: 10px;
+  }
+
+  .no-playground {
+    height: 280px;
+  }
+
+  .polaroid img {
+    min-height: 250px;
+  }
+
+  .ticket {
+    padding: 1rem;
+  }
+
+  .ticket-row {
+    gap: 0.45rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .option-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .decision-row {
+    flex-direction: column;
+  }
+
+  #yesBtnChase,
+  #noEscapeBtn {
+    font-size: 0.9rem;
+    padding-inline: 0.95rem;
+  }
+
+  .calendar-days span {
+    font-size: 0.72rem;
+  }
+
+  .date-cell {
+    height: 40px;
+    font-size: 0.88rem;
+  }
+}
