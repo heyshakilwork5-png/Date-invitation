@@ -1,0 +1,154 @@
+@keyframes floatUp {
+  from {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Updated: Glowing Pulse for YES Button */
+@keyframes softPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 12px 26px rgba(233, 79, 127, 0.3);
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 20px 40px rgba(233, 79, 127, 0.65);
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-16px) translateX(8px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+@keyframes revealIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* New: Floating Blobs Animation */
+@keyframes blobFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-30px) scale(1.1) rotate(10deg);
+  }
+  66% {
+    transform: translateY(20px) scale(0.9) rotate(-10deg);
+  }
+}
+
+.bg-blobs span {
+  animation: blobFloat 12s infinite alternate ease-in-out;
+}
+
+.bg-blobs span:nth-child(2) {
+  animation-delay: -4s;
+  animation-duration: 15s;
+}
+
+.bg-blobs span:nth-child(3) {
+  animation-delay: -8s;
+  animation-duration: 10s;
+}
+
+.opening-screen h1,
+.opening-screen p,
+.opening-screen .btn,
+.opening-screen small {
+  opacity: 0;
+  animation: floatUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.opening-screen p {
+  animation-delay: 0.25s;
+}
+
+.opening-screen .btn {
+  animation-delay: 0.5s;
+}
+
+.opening-screen small {
+  animation-delay: 0.7s;
+}
+
+.pulse {
+  animation: softPulse 1.8s ease-in-out infinite;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.reveal.in-view {
+  animation: revealIn 0.8s ease forwards;
+}
+
+.floating-layer .particle {
+  animation: drift 7s ease-in-out infinite;
+}
+
+.floating-layer .particle.sparkle {
+  animation: twinkle 2.6s ease-in-out infinite;
+}
+
+.screen.active .screen-content > * {
+  animation: revealIn 0.62s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.screen.active .screen-content > *:nth-child(2) {
+  animation-delay: 0.06s;
+}
+
+.screen.active .screen-content > *:nth-child(3) {
+  animation-delay: 0.11s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  .opening-screen h1,
+  .opening-screen p,
+  .opening-screen .btn,
+  .opening-screen small,
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
